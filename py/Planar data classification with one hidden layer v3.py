@@ -734,7 +734,7 @@ def nn_model(X, Y, n_h, num_iterations = 10000, print_cost=False):
         A2, cache = forward_propagation(X,parameters)
         
         # Cost function. Inputs: "A2, Y, parameters". Outputs: "cost".
-        cost = compute_cost(A2, Y, parameters)
+        cost = compute_cost(A2, Y)
  
         # Backpropagation. Inputs: "parameters, cache, X, Y". Outputs: "grads".
         grads = backward_propagation(parameters, cache, X, Y)
